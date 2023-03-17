@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Javascript handson6P </p>
+    <p>Problem Solving</p>
+    <p>Question 1 </p>
+  <pre>
+    
+    var Minimal_Angle = (h, m) => 
+    {
+      h = h%12;
+      let hour = (h*360)/12 + (m*360)/(12*60);
+      let min = (m*360)/60;
+      let angle = Math.abs(hour-min);
+      
+      if(angle>180)
+      return 360-angle;
+      else
+      return angle;
+    };
+     
+  </pre>
+      
+
+  
+
+    <p>Question 2</p>
+    <pre> 
+      var Check_Leap = (year) => 
+      {
+       
+        if (year % 400 === 0)
+        return "Leap Year"
+        if(year % 100 === 0)
+        return "Non Leap Year"
+        if(year % 4 === 0)
+        return "Leap Year"
+        return "Non Leap Year"
+      
+      };
+       
+ 
+    </pre>
+
+     <p>Question 3</p>
+    <pre> 
+      var Perfect_Check = (N) => 
+{
+      
+    let temp =0;
+    for (i=1;i<=N/2;i++)
+    {
+      if(N%i === 0)
+      {
+        temp += i;
+      }
+    }
+    
+    if(temp === N && temp !==0)
+    {
+      return ("yes");
+    }
+    else
+    {
+      return("NO")
+    }
+    
+};
+       
+      
+    </pre>
+
+    <p>Question 4</p>
+    <pre> 
+      var Reverse_Number = (N) => 
+      {
+        
+      let rev = 0;
+      while (N >  0)
+      {
+        rev = rev *10 +N %10;
+        N=Math.floor(N/10);
+      }
+      return rev;
+      };
+       
+
+    </pre>
+
+    <p>Question 5</p>
+    <pre> 
+     
+              
+      var Substring_Check = (S1, S2) => 
+      {
+          let bool = S1.indexOf(S2)
+          if (bool!== -1){
+            return "YES"
+          }
+          else{
+            return "NO"
+          }
+      };
+       
+
+
+    </pre>
+
+    
+
+</body>
+</html>
